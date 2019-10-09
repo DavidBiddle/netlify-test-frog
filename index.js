@@ -1,7 +1,9 @@
 const fetch = require("isomorphic-fetch");
 
 exports.handler = async (event, context) => {
-    const fileURL  = "https://elastic-wilson-6356ee.netlify.com/img/frog.jpg"
+    const urls = ['frog1', 'frog2'];
+    const number = Math.ceil(Math.random() * 2);
+    const fileURL  = `https://elastic-wilson-6356ee.netlify.com/img/${urls[number]}`;
 
     let image;
     try {
