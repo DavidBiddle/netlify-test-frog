@@ -1,8 +1,19 @@
 const fetch = require("isomorphic-fetch");
+const fs = require("fs");
+
+const listImages = () => {    
+    const imagePaths = [];
+    var path = process.argv[2];
+    
+    fs.readdir(path, function(err, items) {
+        imagePaths = [...items];
+    });
+}
+
 
 exports.handler = async (event, context) => {
     if (new Date().getDay() === 3) {
-        const urls = ["frog1.jpg", "frog2.png"];
+        const urls = listImages();
         const number = Math.floor(Math.random() * urls.length);
         // const mimetype = urls[number].includes(".jpg") ? "image/jpg" : "image/png";
         const fileURL = `https://it-is-wednesday-my-dudes.netlify.com/img/${urls[number]}`;
