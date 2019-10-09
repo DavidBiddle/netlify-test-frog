@@ -4,7 +4,7 @@ exports.handler = async (event, context) => {
     const urls = ['frog1.jpg', 'frog2.png'];
     const number = Math.floor(Math.random() * urls.length);
     const mimetype = urls[number].includes('.jpg') ? 'image/jpg' : 'image/png';
-    const fileURL  = `https://elastic-wilson-6356ee.netlify.com/img/${urls[number]}`;
+    const fileURL  = `https://it-is-wednesday-my-dudes.netlify.com/img/${urls[number]}`;
 
     let image;
     try {
