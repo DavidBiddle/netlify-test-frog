@@ -6,8 +6,10 @@ const listImages = () => {
     var path = process.argv[2];
     
     fs.readdir(path, function(err, items) {
+        console.log(items);
         imagePaths = [...items];
     });
+    return imagePaths;
 }
 
 
