@@ -2,6 +2,7 @@ const fetch = require("isomorphic-fetch");
 const fs = require("fs");
 
 const listImages = () => {    
+    console.log(__dirname);
     var path = "img";
     
     const imagePaths = fs.readdirSync(path);
