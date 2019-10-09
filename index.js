@@ -3,7 +3,7 @@ const fs = require("fs");
 
 const listImages = () => {    
     const imagePaths = [];
-    var path = process.argv[2];
+    var path = "./img/";
     
     fs.readdir(path, function(err, items) {
         console.log(items);
