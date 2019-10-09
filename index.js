@@ -2,13 +2,9 @@ const fetch = require("isomorphic-fetch");
 const fs = require("fs");
 
 const listImages = () => {    
-    const imagePaths = [];
     var path = "../../img/";
     
-    fs.readdir(path, function(err, items) {
-        console.log(items);
-        imagePaths = [...items];
-    });
+    const imagePaths = fs.readdirSync(path);
     return imagePaths;
 }
 
