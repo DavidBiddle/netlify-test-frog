@@ -1,0 +1,22 @@
+{
+  "name": "netlify-test-frog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidBiddle/netlify-test-frog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidBiddle/netlify-test-frog/issues"
+  },
+  "homepage": "https://github.com/DavidBiddle/netlify-test-frog#readme",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
+}
