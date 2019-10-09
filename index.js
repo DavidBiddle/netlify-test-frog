@@ -1,7 +1,7 @@
 const fetch = require("isomorphic-fetch");
 
 exports.handler = async (event, context) => {
-    const fileURL  = "/img/frog.jpg"
+    const fileURL  = "https://elastic-wilson-6356ee.netlify.com/img/frog.jpg"
 
     let image;
     try {
