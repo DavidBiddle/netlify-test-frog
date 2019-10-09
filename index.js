@@ -1,18 +1,8 @@
 const fetch = require("isomorphic-fetch");
-const fs = require("fs");
-
-const listImages = () => {    
-    console.log(__dirname);
-    var path = "img";
-    
-    const imagePaths = fs.readdirSync(path);
-    return imagePaths;
-}
-
 
 exports.handler = async (event, context) => {
     if (new Date().getDay() === 3) {
-        const urls = listImages();
+        const urls = ["frog1.jpg", "frog2.png"];
         const number = Math.floor(Math.random() * urls.length);
         // const mimetype = urls[number].includes(".jpg") ? "image/jpg" : "image/png";
         const fileURL = `https://it-is-wednesday-my-dudes.netlify.com/img/${urls[number]}`;
