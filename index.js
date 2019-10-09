@@ -1,10 +1,22 @@
 const fetch = require("isomorphic-fetch");
 
 exports.handler = async (event, context) => {
-    const urls = ['frog1.jpg', 'frog2.png'];
+    if (Date.getDay() === 3) {
+        return {
+            statusCode: 200,
+            body: "wednesday"
+        };
+    }else{
+        
+        return {
+            statusCode: 404,
+            body: "404 wednesday not found"
+        };
+    }
+    const urls = ["frog1.jpg", "frog2.png"];
     const number = Math.floor(Math.random() * urls.length);
-    const mimetype = urls[number].includes('.jpg') ? 'image/jpg' : 'image/png';
-    const fileURL  = `https://it-is-wednesday-my-dudes.netlify.com/img/${urls[number]}`;
+    const mimetype = urls[number].includes(".jpg") ? "image/jpg" : "image/png";
+    const fileURL = `https://it-is-wednesday-my-dudes.netlify.com/img/${urls[number]}`;
 
     let image;
     try {
@@ -23,7 +35,7 @@ exports.handler = async (event, context) => {
     return {
         statusCode: 200,
         headers: {
-            "Content-type": mimetype
+            "Content-type": image.type
         },
         body: image.toString("base64"),
         isBase64Encoded: true
