@@ -1,7 +1,7 @@
 const fetch = require("isomorphic-fetch");
 
 exports.handler = async (event, context) => {
-    if (Date.getDay() === 3) {
+    if (new Date().getDay() === 3) {
         return {
             statusCode: 200,
             body: "wednesday"
