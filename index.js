@@ -1,7 +1,7 @@
 const fetch = require("isomorphic-fetch");
 
 exports.handler = async (event, context) => {
-    const fileURL  = "./img/frog.jpg"
+    const fileURL  = "/img/frog.jpg"
 
     let image;
     try {
