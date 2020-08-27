@@ -28,7 +28,9 @@ exports.handler = async (event, context) => {
             "img/frog14.jpg",
             "img/frog15.png",
             "img/frog16.png",
-            "img/frog17.png"
+            "img/frog17.png",
+            "img/frog18.png",
+            "img/frog19.png"
         ];
         const number = Math.floor(Math.random() * urls.length);
         const url = getURL(urls,number);
