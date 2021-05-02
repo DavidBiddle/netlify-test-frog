@@ -26,7 +26,7 @@ exports.handler = async (event, context) => {
             'img/frog9.jpg',
             'img/frog10.png',
             'img/frog11.jpg',
-            'img/frog12.jpg',
+            'img/frog12.png',
             'img/frog13.jpg',
             'img/frog14.jpg',
             'img/frog15.png',
